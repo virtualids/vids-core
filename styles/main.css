@@ -3,6 +3,11 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    margin: 0
+}
+
+html {
+    margin: 0
 }
 
 #optionbar {
@@ -13,12 +18,89 @@ body {
 
 #top {
     width: 100%;
-    height: 80%;
+    height: 75%;
     background: blue;
 }
 
 #bottomButtonBar {
+    display: flex;
     width: 100%;
-    height: 15%;
-    background: purple;
+    height: 20%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bottomButton {
+    display: flex;
+    flex-direction: column;
+    width: 7.06%;
+}
+
+.bottomButtonSpecial {
+    width: 1.16%;
+    
+}
+
+.manbutton {
+    color:white;
+    height: 99%;
+    background: rgb(73,73,73);
+    background: linear-gradient(180deg, rgba(73,73,73,1) 0%, rgba(51,51,51,1) 100%);
+    text-orientation: upright;
+    border-color: white;
+}
+
+.btnBarGrayBtn {
+    color:white;
+    background: rgb(73,73,73);
+    background: linear-gradient(180deg, rgba(73,73,73,1) 0%, rgba(51,51,51,1) 100%);
+    border-color: white;
+    height: 33%;
+}
+
+.smallGreenButton {
+    color:white;
+    background: rgb(132,192,110);
+    background: linear-gradient(180deg, rgba(132,192,110,1) 0%, rgba(54,59,55,1) 100%);
+    border-color: white;
+    height: 33%;
+}
+
+.bigGreenButton {
+    color:white;
+    background: rgb(132,192,110);
+    background: linear-gradient(180deg, rgba(132,192,110,1) 0%, rgba(54,59,55,1) 100%);
+    border-color: white;
+    height: 66%;
+}
+
+.pinkButton {
+    color:white;
+    background: rgb(207,83,138);
+    background: linear-gradient(180deg, rgba(207,83,138,1) 0%, rgba(51,50,50,1) 100%);
+    border-color: white;
+    height: 66%;
+}
+
+.blueButton {
+    color:white;
+    background: rgb(66,66,124);
+    background: linear-gradient(180deg, rgba(66,66,124,1) 0%, rgba(47,47,47,1) 100%);
+    border-color: white;
+    height: 66%;
+}
+
+.redButton {
+    color:white;
+    background: rgb(212,76,73);
+    background: linear-gradient(180deg, rgba(212,76,73,1) 0%, rgba(132,62,62,1) 100%);
+    border-color: white;
+    height: 66%;
+}
+
+.emptyButton {
+    color:white;
+
+    border-color: white;
+    height: 33%;
 }
