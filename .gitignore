@@ -1,0 +1,7 @@
+# code editors
+.vscode/
+.vs/
+.idea/
+
+# package shit
+node_modules/
