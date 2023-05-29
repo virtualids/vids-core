@@ -1,0 +1,23 @@
+{
+  "name": "vids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bordolbg/vids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bordolbg/vids/issues"
+  },
+  "homepage": "https://github.com/bordolbg/vids#readme",
+  "devDependencies": {
+    "electron": "^24.4.0"
+  }
+}
