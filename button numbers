@@ -1,0 +1,50 @@
+The buttons on the bottom of the screen all have their own id within their element.
+
+WX - twrBtnWX
+Rare Phraseology - twr
+
+Phone - twrBtnPhone
+FREQs - twrBtnFREQs
+Equipment - twrBtnEquipment
+
+Maps - twrBtnMaps
+Charts - twrBtnCharts
+\sec\ NOTAMS - twrBtnNOTAMS (the button's content can also be changed to reflect field)
+
+Pipelines - twrBtnPipelines
+Misc - twrBtnMisc
+LAHSA - twrBtnLAHSO
+
+Approaches - twrBtnApproaches
+LOA/Orders - twrBtnLOAOrders
+Wake Turbulence - twrBtnWakeTurbulence
+
+Distance Remaining - twrBtnDistanceRemaining
+STARS Quick Ref Guide - twrBtnSTARSQuickRef
+FLOW - twrBtnFLOW
+
+Database Search - twrBtnDatabaseSearch
+HOME - DEP - twrBtnHomeDep
+HOME - LW - twrBtnHomeLw
+
+RVR - twrBtnRVR
+HOME - twrBtnHome
+
+Sat Wx - twrBtnSatWX
+\sec\ twrBtnAPPLink
+
+\sec\ Airspace - twrBtnAPPAirspace
+Relief Briging - twrBtnReliefBriefing
+
+Runway Info - twrBtnRunwayInfo
+
+Visual Separation - twrBtnVisualSeparation
+Traffic - Altitude Alert - twrBtnTrafficAlt
+Handoff - Pointout - twrBtnHandoffPointout
+
+Laser Event - twrBtnLaserEvent
+Weather Phraseology - twrBtnWeather
+Traffic Phraseology - twrBtnTraffic
+
+Emergency Response - twrBtnEmergencyResponse
+Emergency Menu - twrBtnEmergencyMenu
