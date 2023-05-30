@@ -71,6 +71,7 @@ html {
 #metarGroup {
     display: flex;
     flex-direction: row;
+    height: 100%;
     width: 100%;
     margin-top: 0;
 }
@@ -90,7 +91,7 @@ html {
     border-width: 2px;
     color: white;
     font-size: 50px;
-    height: 75%;
+    height: 80%;
     margin: 0;
     text-align: center;
 }
@@ -101,7 +102,7 @@ html {
     border-style: solid;
     border-color: #475b74;
     border-width: 1px;
-    
+
 }
 
 #metarText {
