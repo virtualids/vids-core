@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -44,10 +50,14 @@ html {
     border-style: solid;
     border-color: white;
     border-width: 1px;
+    font-family: 'Inter', sans-serif;
+    
 }
 
 #freqTablePaste {
     margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
 }
 
 #leftSide {
@@ -71,7 +81,7 @@ html {
 #metarGroup {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 80%;
     width: 100%;
     margin-top: 0;
 }
@@ -80,7 +90,7 @@ html {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 10%;
+    width: 7%;
     margin-top: 0;
 }
 
@@ -94,6 +104,7 @@ html {
     height: 80%;
     margin: 0;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 #time {
@@ -102,7 +113,9 @@ html {
     border-style: solid;
     border-color: #475b74;
     border-width: 1px;
-
+    margin: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 #metarText {
@@ -112,11 +125,19 @@ html {
     border-color: white;
     border-width: 1px;
     margin: 0;
+    width: 88%;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    padding: 2px;
+    
 }
 
 #drop {
     display: flex;
     flex-direction: column;
+    width: 6%;
+    height: 100%;
+    margin: 0;
 }
 
 #metarDataLabel {
@@ -129,6 +150,56 @@ html {
     background: rgb(154,218,232);
     background: linear-gradient(180deg, rgba(154,218,232,1) 0%, rgba(91,73,131,1) 100%);
 }
+
+#dropLabel {
+    background: #44467f;
+    height: 25%;
+    color: white;
+    margin: 0;
+    text-align: center;
+    border-style: solid;
+    border-color: #2d728b;
+    border-width: 1px;
+}
+
+#dropValue {
+    background: rgb(145,145,145);
+    background: linear-gradient(180deg, rgba(145,145,145,1) 0%, rgba(0,0,0,1) 100%);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    height: 75%;
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+#flow {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+#labelandactualflow {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #bottomButtonBar {
     display: flex;
@@ -166,6 +237,11 @@ html {
     height: 33%;
 }
 
+.btnBarGrayBtn:hover {
+    border-color: yellow;
+    color: yellow;
+}
+
 .smallGreenButton {
     color:white;
     background: rgb(132,192,110);
@@ -174,12 +250,23 @@ html {
     height: 33%;
 }
 
+.smallGreenButton:hover {
+    border-color: yellow;
+    color: yellow;
+}
+
 .bigGreenButton {
     color:white;
     background: rgb(132,192,110);
     background: linear-gradient(180deg, rgba(132,192,110,1) 0%, rgba(54,59,55,1) 100%);
     border-color: white;
     height: 66%;
+    font-size: 30px;
+}
+
+.bigGreenButton:hover {
+    border-color: yellow;
+    color: yellow;
 }
 
 .pinkButton {
@@ -188,6 +275,12 @@ html {
     background: linear-gradient(180deg, rgba(207,83,138,1) 0%, rgba(51,50,50,1) 100%);
     border-color: white;
     height: 66%;
+    font-size: 30px;
+}
+
+.pinkButton:hover {
+    border-color: yellow;
+    color: yellow;
 }
 
 .blueButton {
@@ -198,12 +291,22 @@ html {
     height: 66%;
 }
 
+.blueButton:hover {
+    border-color: yellow;
+    color: yellow;
+}
+
 .redButton {
     color:white;
     background: rgb(212,76,73);
     background: linear-gradient(180deg, rgba(212,76,73,1) 0%, rgba(132,62,62,1) 100%);
     border-color: white;
     height: 66%;
+}
+
+.redButton:hover {
+    border-color: yellow;
+    color: yellow;
 }
 
 .emptyButton {
