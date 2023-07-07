@@ -1,0 +1,119 @@
+{
+    "system": "IDSR",
+    "type": "CAB",
+    "idsName": "IAH CAB",
+    "airportICAO": "KIAH",
+    "class": "B",
+    "runways": [
+        "8L",
+        "26R",
+        "8R",
+        "26L",
+        "9",
+        "27",
+        "15L",
+        "33R",
+        "15R",
+        "33L"
+    ],
+    "flow": [
+        {
+            "name": "SOUTH/WEST TRIPS",
+            "apch": "ILS/RNAV",
+            "runway": "WEST",
+            "depry": [
+                "15L",
+                "15R"
+            ],
+            "arrry": [
+                {
+                    "runway": "26R",
+                    "apch": "ILS OR RNAV Y"
+                },
+                {
+                    "runway": "26L",
+                    "apch": "ILS"
+                    
+                },
+                {
+                    "runway": "27",
+                    "apch":"ILS"
+                }
+                
+            ] 
+        },
+        {
+            "name": "SOUTH/WEST 26S",
+            "apch": "ILS/RNAV",
+            "runway": "WEST",
+            "depry": [
+                "15L",
+                "15R"
+            ],
+            "arrry": [
+                {
+                    "runway": "26R",
+                    "apch": "ILS OR RNAV Y"
+                },
+                {
+                    "runway": "26L",
+                    "apch": "ILS"
+                    
+                }
+            ]
+        },
+        {
+            "name": "SOUTH/WEST 26R/27",
+            "apch": "ILS/RNAV",
+            "runway": "WEST",
+            "depry": [
+                "15L",
+                "15R"
+            ],
+            "arrry": [
+                {
+                    "runway": "26R",
+                    "apch": "ILS OR RNAV Y"
+                },
+                {
+                    "runway": "27",
+                    "apch":"ILS"
+                }
+            ]
+        }
+    ],
+    "charts": {
+        "STAR": [
+            {
+                "name": "DOOBI (RNAV)",
+                "link": "05461doobi.pdf"
+            },
+            {
+                "name": "DRLLR FIVE (RNAV)",
+                "link": "05461drllr.pdf"
+            },
+            {
+                "name": "DRLLR FIVE (RNAV), CONT.1",
+                "link": "05461drllr_c.pdf"
+            },
+            {
+                "name": "DUUUK THREE",
+                "link": "05461duuuk.pdf"
+            },
+            {
+                "name": "DUUUK THREE, CONT.1",
+                "link": "05461duuuk_c.pdf"
+            }
+        ],
+        "APCH": [
+            {
+                "name": "ILS OR LOC RWY 08L",
+                "link": "05461il8l.pdf"
+            },
+            {
+                "name": "ILS OR LOC RWY 08R",
+                "link": "05461il8r.pdf"
+            }
+        ]
+    }
+}
