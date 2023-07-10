@@ -9,7 +9,8 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 0
+    margin: 0;
+    overflow: hidden;
 }
 
 html {
@@ -17,7 +18,83 @@ html {
     height: 100%;
 }
 
+h2 {
+    margin: auto;
+}
 
+.indexButton {
+    background-color:gray;
+    color: black;
+    border: none;
+    font-size: 16px;
+    width: 200px;
+    height: 60px;
+    transition-duration: .7s;
+    border-radius: 10px;
+}
+
+.indexButton:hover {
+    background-color: #b3b3b3;
+    border: 2px solid #b3b3b3;
+    color: black;
+    cursor: pointer;
+    transition-duration: .7s;
+    border-radius: 10px;
+}
+
+#welcomeBody {
+    background-color: lightgray;
+}
+
+#description {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    color: black;
+}
+
+#header {
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#184067+0,050d15+100 */
+background: #184067; /* Old browsers */
+background: -moz-linear-gradient(top,  #184067 0%, #050d15 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #184067 0%,#050d15 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #184067 0%,#050d15 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#184067', endColorstr='#050d15',GradientType=0 );
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 10%;
+padding: 10px;
+font-family: sans-serif;
+
+/* IE6-9 */
+}
+
+
+#headerTitle {
+    height: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+#description {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
 
 #optionbar {
     width: 100%;
@@ -176,8 +253,6 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
-
-
 #flow {
     display: flex;
     flex-direction: row;
@@ -188,18 +263,6 @@ html {
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 #bottomButtonBar {
     display: flex;
