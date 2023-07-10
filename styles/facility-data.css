@@ -81,20 +81,51 @@ font-family: sans-serif;
     color: white;
 }
 
-
+#artccFacilities {
+    height: 100%;
+    width: 100%;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: row;
+}
 
 #leftSide {
     width: 33%;
     height: 100%;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: column;
 }
 
 #leftSideTitle {
-    background: #37bd5f;
+    background: #ffffff;
     border-style: solid;
     border-color: white;
     border-width: 2px;
-    color: white;
-    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 44px;
+    height: 80%;
+    margin: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#middle {
+    width: 66%;
+    height: 100%;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: column;
+}
+
+#middleTitle {
+    background: #ffffff;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    color: rgb(0, 0, 0);
+    font-size: 44px;
     height: 80%;
     margin: 0;
     text-align: center;
