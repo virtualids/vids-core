@@ -32,8 +32,8 @@ wxModalClose.onclick = function() {
 // rare phraseology
 
 var rpModal = document.getElementById("rpModal");
-var rpbtn = document.getElementById("twrBtnWX");
-var rpModalClose = document.getElementsByClassName("wxModalClose")[0];
+var rpbtn = document.getElementById("twrBtnRarePhraseology");
+var rpModalClose = document.getElementsByClassName("rpModalClose")[0];
 
 rpbtn.onclick = function() {
     rpModal.style.display = "block";
@@ -45,16 +45,16 @@ rpModalClose.onclick = function() {
 
 // phone
 
-var rpModal = document.getElementById("rpModal");
-var rpbtn = document.getElementById("twrBtnWX");
-var rpModalClose = document.getElementsByClassName("wxModalClose")[0];
+var phoneModal = document.getElementById("phoneModal");
+var phonebtn = document.getElementById("twrBtnPhone");
+var phoneModalClose = document.getElementsByClassName("phoneModalClose")[0];
 
-rpbtn.onclick = function() {
-    rpModal.style.display = "block";
+phonebtn.onclick = function() {
+    phoneModal.style.display = "block";
 }
 
-rpModalClose.onclick = function() {
-    rpModal.style.display = "none";
+phoneModalClose.onclick = function() {
+    phoneModal.style.display = "none";
 }
 
 // freqs
