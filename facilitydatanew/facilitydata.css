@@ -90,7 +90,7 @@ font-family: sans-serif;
     gap: 50px;
     height: auto;
     width: auto;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     margin-inline-start: 10%;
     margin-inline-end: 10%;
 }
@@ -111,4 +111,16 @@ font-family: sans-serif;
     color:darkred;
     border-color: darkred;
     cursor: pointer;
+}
+
+.artccButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    height: auto;
+    width: auto;
+    margin-bottom: 1em;
+    margin-inline-start: 30.7%;
+    margin-inline-end: 30.7%;
 }
