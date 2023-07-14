@@ -5,6 +5,7 @@
 
 File log:
 7/9/2023, we lost the fucking scroll bar
+7/12/2023 rename repo: frontend
 
 */
 
@@ -72,27 +73,54 @@ font-family: sans-serif;
     font-family: "Inter", sans-serif;
 }
 
-.artccListBody {
-    color: #000000;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    margin: 1.7%;
-    background:none;
-    border:0px
+#artccButtons {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
 }
 
-.leftSideList {
+.artccButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    height: auto;
+    width: auto;
+    margin-bottom: 2em;
+    margin-inline-start: 10%;
+    margin-inline-end: 10%;
+}
+
+.artccBtn {
+    color:black;
     background: #ffffff;
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    margin-left: 27%;
-    text-align: left;
-    overflow: auto;
-    max-height: 100vh;
-    list-style-type: none
+    border-color: black;
+    border-width: 3px;
+    height: auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    width: 100%;
 }
 
-.artccListBody:hover {
-    cursor:pointer;
+.artccBtn:hover {
+    color:darkred;
+    border-color: darkred;
+    cursor: pointer;
+}
+
+.artccButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    height: auto;
+    width: auto;
+    margin-bottom: 1em;
+    margin-inline-start: 30.7%;
+    margin-inline-end: 30.7%;
 }
