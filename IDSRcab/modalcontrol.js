@@ -59,6 +59,18 @@ phoneModalClose.onclick = function() {
 
 // freqs
 
+var freqsModal = document.getElementById("freqsModal");
+var freqsbtn = document.getElementById("twrBtnFREQs");
+var freqsModalClose = document.getElementsByClassName("freqsModalClose")[0];
+
+freqsbtn.onclick = function() {
+    freqsModal.style.display = "block";
+}
+
+freqsModalClose.onclick = function() {
+    freqsModal.style.display = "none";
+}
+
 // equipment
 
 // maps
