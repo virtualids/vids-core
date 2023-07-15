@@ -166,3 +166,59 @@ zjx.onclick = function() {
 zjxModalClose.onclick = function() {
     zjxModal.style.display = "none";
 }
+
+// zkc
+
+var zkcModal = document.getElementById("zkcModal");
+var zkc = document.getElementById("zkc");
+var zkcModalClose = document.getElementsByClassName("zkcModalClose")[0];
+
+zkc.onclick = function() {
+    zkcModal.style.display = "block";
+}
+
+zkcModalClose.onclick = function() {
+    zkcModal.style.display = "none";
+}
+
+// zla
+
+var zlaModal = document.getElementById("zlaModal");
+var zla = document.getElementById("zla");
+var zlaModalClose = document.getElementsByClassName("zlaModalClose")[0];
+
+zla.onclick = function() {
+    zlaModal.style.display = "block";
+}
+
+zlaModalClose.onclick = function() {
+    zlaModal.style.display = "none";
+}
+
+// zma
+
+var zmaModal = document.getElementById("zmaModal");
+var zma = document.getElementById("zma");
+var zmaModalClose = document.getElementsByClassName("zmaModalClose")[0];
+
+zma.onclick = function() {
+    zmaModal.style.display = "block";
+}
+
+zmaModalClose.onclick = function() {
+    zmaModal.style.display = "none";
+}
+
+// zme
+
+var zmeModal = document.getElementById("zmeModal");
+var zme = document.getElementById("zme");
+var zmeModalClose = document.getElementsByClassName("zmeModalClose")[0];
+
+zme.onclick = function() {
+    zmeModal.style.display = "block";
+}
+
+zmeModalClose.onclick = function() {
+    zmeModal.style.display = "none";
+}
