@@ -143,6 +143,7 @@ font-family: sans-serif;
 
 .modal {
     display: none;
+    justify-content: center;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -160,7 +161,7 @@ font-family: sans-serif;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 30%;
 }
 
 .modal-body {
@@ -173,9 +174,22 @@ font-family: sans-serif;
     font-family: "Inter", sans-serif;
     font-size: 24px;
     width: auto;
+    margin-bottom: 1em;
 }
 
-.modal-body:hover {
+.modal-button {
+    color:black;
+    background: #ffffff;
+    border-color: black;
+    border-width: 3px;
+    height: auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    width: auto;
+}
+
+.modal-button:hover {
     cursor: pointer;
 }
 
@@ -185,8 +199,12 @@ font-family: sans-serif;
     border-color: black;
     border-width: 3px;
     height: auto;
-    text-align: left;
+    text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 20px;
     width: auto;
+}
+
+.modal-footer:hover {
+    cursor: default;
 }
