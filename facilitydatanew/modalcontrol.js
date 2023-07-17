@@ -222,3 +222,87 @@ zme.onclick = function() {
 zmeModalClose.onclick = function() {
     zmeModal.style.display = "none";
 }
+
+// zmp
+
+var zmpModal = document.getElementById("zmpModal");
+var zmp = document.getElementById("zmp");
+var zmpModalClose = document.getElementsByClassName("zmpModalClose")[0];
+
+zmp.onclick = function() {
+    zmpModal.style.display = "block";
+}
+
+zmpModalClose.onclick = function() {
+    zmpModal.style.display = "none";
+}
+
+// zny
+
+var znyModal = document.getElementById("znyModal");
+var zny = document.getElementById("zny");
+var znyModalClose = document.getElementsByClassName("znyModalClose")[0];
+
+zny.onclick = function() {
+    znyModal.style.display = "block";
+}
+
+znyModalClose.onclick = function() {
+    znyModal.style.display = "none";
+}
+
+// zoa
+
+var zoaModal = document.getElementById("zoaModal");
+var zoa = document.getElementById("zoa");
+var zoaModalClose = document.getElementsByClassName("zoaModalClose")[0];
+
+zoa.onclick = function() {
+    zoaModal.style.display = "block";
+}
+
+zoaModalClose.onclick = function() {
+    zoaModal.style.display = "none";
+}
+
+// zlc
+
+var zlcModal = document.getElementById("zlcModal");
+var zlc = document.getElementById("zlc");
+var zlcModalClose = document.getElementsByClassName("zlcModalClose")[0];
+
+zlc.onclick = function() {
+    zlcModal.style.display = "block";
+}
+
+zlcModalClose.onclick = function() {
+    zlcModal.style.display = "none";
+}
+
+// zse
+
+var zseModal = document.getElementById("zseModal");
+var zse = document.getElementById("zse");
+var zseModalClose = document.getElementsByClassName("zseModalClose")[0];
+
+zse.onclick = function() {
+    zseModal.style.display = "block";
+}
+
+zseModalClose.onclick = function() {
+    zseModal.style.display = "none";
+}
+
+// zdc
+
+var zdcModal = document.getElementById("zdcModal");
+var zdc = document.getElementById("zdc");
+var zdcModalClose = document.getElementsByClassName("zdcModalClose")[0];
+
+zdc.onclick = function() {
+    zdcModal.style.display = "block";
+}
+
+zdcModalClose.onclick = function() {
+    zdcModal.style.display = "none";
+}
