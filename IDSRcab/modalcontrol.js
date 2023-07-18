@@ -3,16 +3,11 @@
 
 // settings modal
 
-var settingsModal = document.getElementById("settingsModal");
-var settingsbtn = document.getElementById("twrBtnSettings");
-var settingsModalClose = document.getElementsByClassName("settingsModalClose")[0];
+let settingsModal = document.getElementById("settingsModal");
+let settingsbtn = document.getElementById("twrBtnSettings");
 
 settingsbtn.onclick = function() {
     settingsModal.style.display = "block";
-}
-
-settingsModalClose.onclick = function() {
-    settingsModal.style.display = "none";
 }
 
 // wx modal
@@ -31,9 +26,9 @@ wxModalClose.onclick = function() {
 
 // rare phraseology
 
-var rpModal = document.getElementById("rpModal");
-var rpbtn = document.getElementById("twrBtnRarePhraseology");
-var rpModalClose = document.getElementsByClassName("rpModalClose")[0];
+let rpModal = document.getElementById("rpModal");
+let rpbtn = document.getElementById("twrBtnRarePhraseology");
+let rpModalClose = document.getElementsByClassName("rpModalClose")[0];
 
 rpbtn.onclick = function() {
     rpModal.style.display = "block";
