@@ -128,13 +128,28 @@
         <div id="settingsModal" class="modal">
             <div class="modal-content">
                 <div id="settingsModalHeader" class="modal-header">
+                    <h1>IDSR Settings</h1>
                     <span class="settingsModalClose close">&times;</span>
                 </div>
                 <div id="settingsModalBody" class="modal-body">
-                    <button>example</button>
+                    <div id="settingsButtonAction" class="modal-body-section">
+                        <h3>Button Action Mode</h3>
+                        <p>Selects which way a window should be opened when pressing a button</p>
+                        <form>
+                            <label>
+                                <input type="radio" name="optradio" id="windowInScreen"> Window in Screen
+                            </label>
+                            <label>
+                                <input type="radio" name="optradio" id="newTab"> New Tab
+                            </label>
+                            <label>
+                                <input type="radio" name="optradio" id="newWindow"> New Window
+                            </label>
+                        </form>
+                    </div>
                 </div>
                 <div id="settingsModalFooter" class="modal-footer">
-                    Settings Modal
+                    <button id="saveSettingsButton">Save</button>
                 </div>
             </div>
         </div>
@@ -704,5 +719,6 @@
         <script src="main.js"></script>
         <script src="modalcontrol.js"></script>
         <script src="loadfacility.js"></script>
+        <script src="settings.js"></script>
     </footer>
 </html>
