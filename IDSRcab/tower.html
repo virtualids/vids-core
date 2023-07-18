@@ -54,13 +54,13 @@
         <div id="bottomButtonBar">
             <div id="buttons1" class="bottomButton">
                 <button id="twrBtnSettings" class="btnBarGrayBtn">Settings</button> <!-- empty button -->
-                <button id="twrBtnWX" class="btnBarGrayBtn">WX</button>
+                <button disabled id="twrBtnWX" class="btnBarGrayBtn">WX</button>
                 <button id="twrBtnRarePhraseology" class="btnBarGrayBtn">Rare<br>Phraseology</button>
             </div>
             <div id="buttons2" class="bottomButton">
-                <button id="twrBtnPhone" class="btnBarGrayBtn">Phone</button>
+                <button disabled id="twrBtnPhone" class="btnBarGrayBtn">Phone</button>
                 <button id="twrBtnFREQs" class="btnBarGrayBtn">FREQs</button>
-                <button id="twrBtnEquipment" class="btnBarGrayBtn">Equipment</button>
+                <button disabled id="twrBtnEquipment" class="btnBarGrayBtn">Equipment</button>
             </div>
             <div id="buttons3" class="bottomButton">
                 <button id="twrBtnMaps" class="btnBarGrayBtn">Maps</button>
@@ -68,8 +68,8 @@
                 <button id="twrBtnNOTAMS" class="btnBarGrayBtn">\sec\<br>NOTAMS</button>
             </div>
             <div id="buttons4" class="bottomButton">
-                <button id="twrBtnPipelines" class="btnBarGrayBtn">Pipelines</button>
-                <button id="twrBtnMisc" class="btnBarGrayBtn">Misc</button>
+                <button disabled id="twrBtnPipelines" class="btnBarGrayBtn">Pipelines</button>
+                <button disabled id="twrBtnMisc" class="btnBarGrayBtn">Misc</button>
                 <button id="twrBtnLAHSO" class="btnBarGrayBtn">LAHSO</button>
             </div>
             <div id="buttons5" class="bottomButton">
@@ -83,28 +83,28 @@
                 <button id="twrBtnFLOW" class="smallGreenButton">FLOW</button> <!-- green background -->
             </div>
             <div id="buttons7" class="bottomButton">
-                <button id="twrBtnDatabaseSearch" class="btnBarGrayBtn">Database<br>Search</button>
-                <button id="twrBtnHomeDep" class="smallGreenButton">HOME - DEP</button> <!-- green background -->
-                <button id="twrBtnHomeLw" class="smallGreenButton">HOME - LW</button> <!-- green background -->
+                <button disabled id="twrBtnDatabaseSearch" class="btnBarGrayBtn">Database<br>Search</button>
+                <button disabled id="twrBtnHomeDep" class="smallGreenButton">HOME - DEP</button> <!-- green background -->
+                <button disabled id="twrBtnHomeLw" class="smallGreenButton">HOME - LW</button> <!-- green background -->
             </div>
             <div id="buttons8" class="bottomButton">
-                <button id="twrBtnRVR" class="btnBarGrayBtn">RVR</button>
+                <button disabled id="twrBtnRVR" class="btnBarGrayBtn">RVR</button>
                 <button id="twrBtnHOME" class="bigGreenButton">HOME</button> <!-- green background, twice the height -->
             </div>
             <div id="buttons9" class="bottomButton">
                 <button id="twrBtnSatWX" class="btnBarGrayBtn">Sat Wx</button>
-                <button id="twrBtnAPPLink" class="pinkButton">\sec\</button> <!-- pink background, twice the height -->
+                <button disabled id="twrBtnAPPLink" class="pinkButton">\sec\</button> <!-- pink background, twice the height -->
             </div>
             <div id="buttons10" class="bottomButton">
                 <button id="twrBtnAPPAirspace" class="btnBarGrayBtn">\sec\ Airspace</button>
                 <button id="twrBtnReliefBriefing" class="blueButton">Relief<br>Briefing</button> <!-- blue background, twice the height -->
             </div>
             <div id="buttons11" class="bottomButton">
-                <button class="btnBarGrayBtn" disabled></button> <!-- empty button -->
+                <button disabled class="btnBarGrayBtn"></button> <!-- empty button -->
                 <button id="twrBtnRunwayInfo" class="blueButton">Runway<br>Info</button> <!-- blue background, twice the height -->
             </div>
             <div id="buttons12" class="bottomButtonSpecial">
-                <button class="manbutton" disabled>7<br>1<br>1<br>0<br>.<br>6<br>5</button> <!-- disabled button, very thing, vertical text, three times the height -->
+                <button disabled class="manbutton">7<br>1<br>1<br>0<br>.<br>6<br>5</button> <!-- disabled button, very thing, vertical text, three times the height -->
             </div>
             <div id="buttons13" class="bottomButton">
                 <button id="twrBtnVisualSeparation" class="btnBarGrayBtn">Visual<br>Separation</button>
@@ -149,7 +149,9 @@
                     </div>
                 </div>
                 <div id="settingsModalFooter" class="modal-footer">
-                    <button id="saveSettingsButton">Save</button>
+                    <button id="cancelSettingsButton">Cancel</button>
+                    <button id="closeSettingsButton">Close</button>
+                    <button id="saveSettingsButton">Save & Apply</button>
                 </div>
             </div>
         </div>

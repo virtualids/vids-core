@@ -1,5 +1,7 @@
 let firstTime = localStorage.getItem("first_time");
 
+
+
 if (!firstTime) {
     localStorage.setItem("openWindow", "windowInScreen");
 
@@ -34,4 +36,29 @@ saveButton.onclick = function() {
     } else {
         localStorage.setItem("openWindow", "windowInScreen");
     }
+    let settingsModal = document.getElementById("settingsModal");
+    settingsModal.style.display = "none";
+}
+
+let closeButton = document.getElementById("closeSettingsButton");
+closeButton.onclick = function() {
+
+    let settingsModal = document.getElementById("settingsModal");
+    settingsModal.style.display = "none";
+}
+
+let cancelButton = document.getElementById("cancelSettingsButton");
+cancelButton.onclick = function() {
+    if (localStorage.getItem("openWindow") === "windowInScreen") {
+        document.getElementById("windowInScreen").checked = true;
+    } else if (localStorage.getItem("openWindow") === "newTab") {
+        document.getElementById("newTab").checked = true;
+    } else if (localStorage.getItem("openWindow") === "newWindow") {
+        document.getElementById("newWindow").checked = true;
+    } else {
+        document.getElementById("windowInScreen").checked = true;
+    }
+
+    let settingsModal = document.getElementById("settingsModal");
+    settingsModal.style.display = "none";
 }
