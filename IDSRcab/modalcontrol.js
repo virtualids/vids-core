@@ -72,7 +72,7 @@ freqsModalClose.onclick = function() {
 
 // charts
 
-// notams
+// messages
 
 // pipelines
 

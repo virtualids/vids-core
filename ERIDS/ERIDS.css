@@ -1,4 +1,59 @@
+html {
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
 body {
     background-color: #04021d;
     color: #f3e0c1;
+    height: 100%;
+}
+
+/* Button Bar */
+
+.bottom-bar {
+
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.bottom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navButton {
+    height: 65px;
+    width: 65px;
+    border-radius: 5px;
+    background-color: #838883;
+    color: #f3e0c1;
+}
+
+.hiddenButton {
+    visibility: hidden;
+}
+
+/* ERIDS */
+
+.erids {
+    height: 75%;
+}
+
+#eridsViewer {
+    height: 100%;
+    width: 100%;
+}
+
+.bottom-bar {
+    height: 25%;
 }

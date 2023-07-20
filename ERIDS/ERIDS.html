@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <title>ERIDS - ICAO</title>
     <link rel="stylesheet" href="ERIDS.css">
+    <script src="../jquery/jquery-3.7.0.js"></script>
 </head>
 <body>
     <div class="erids">
-        this is erids
-        en route information display system
+        <iframe id="eridsViewer" src="modules/settings/settings.html"></iframe>
     </div>
 
+    <div id="taskbar" class="bottom-bar">
+        <div class="top-row">
+            <button class="navButton">Create<br>Shortcut</button>
+            <button class="navButton hiddenButton">blank</button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton">Quick<br>Ref</button>
+            <button class="navButton">&#8592;<br>Back</button>
+        </div>
+        <div class="bottom-row">
+            <button class="navButton">Home</button>
+            <button class="navButton" onclick="changeScreen('modules/messages/messages.html')">Messages</button>
+            <button class="navButton">WX</button>
+            <button class="navButton">ATC docs</button>
+            <button class="navButton">Charts</button>
+            <button class="navButton">Search</button>
+            <button class="navButton">Resector</button>
+            <button class="navButton">Help</button>
+            <button class="navButton">Lookup</button>
+        </div>
+    </div>
 </body>
+<footer>
+    <script src="modules/settings/settings.js"></script>
+    <script src="taskbar.js"></script>
+</footer>
 </html>
