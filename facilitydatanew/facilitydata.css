@@ -125,6 +125,14 @@ font-family: sans-serif;
     margin-inline-end: 30.7%;
 }
 
+.anchor {
+    color:black;
+}
+
+.anchor:link {
+    color:black;
+}
+
 /*modals*/
 
 .close {
