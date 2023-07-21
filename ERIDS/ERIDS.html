@@ -10,10 +10,25 @@
         <iframe id="eridsViewer" src="modules/settings/settings.html"></iframe>
     </div>
 
+
+
     <div id="taskbar" class="bottom-bar">
-        <div class="top-row">
+
+        <div id="homeBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="messagesBar" class="top-row">
             <button class="navButton">Create<br>Shortcut</button>
-            <button class="navButton hiddenButton">blank</button>
+            <button class="navButton hiddenButton"></button>
             <button class="navButton hiddenButton"></button>
             <button class="navButton hiddenButton"></button>
             <button class="navButton hiddenButton"></button>
@@ -22,16 +37,101 @@
             <button class="navButton">Quick<br>Ref</button>
             <button class="navButton">&#8592;<br>Back</button>
         </div>
+
+        <div id="wxBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton">WX Bar</button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="atcdocsBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="chartsBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="searchBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="resectorBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="helpBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
+        <div id="lookupBar" class="top-row">
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+            <button class="navButton hiddenButton"></button>
+        </div>
+
         <div class="bottom-row">
-            <button class="navButton">Home</button>
-            <button class="navButton" onclick="changeScreen('modules/messages/messages.html')">Messages</button>
-            <button class="navButton">WX</button>
-            <button class="navButton">ATC docs</button>
-            <button class="navButton">Charts</button>
-            <button class="navButton">Search</button>
-            <button class="navButton">Resector</button>
-            <button class="navButton">Help</button>
-            <button class="navButton">Lookup</button>
+            <button class="navButton" onclick="changeScreen('home')">Home</button>
+            <button class="navButton" onclick="changeScreen('messages')">Messages</button>
+            <button class="navButton" onclick="changeScreen('wx')">WX</button>
+            <button class="navButton" onclick="changeScreen('atcdocs')">ATC docs</button>
+            <button class="navButton" onclick="changeScreen('charts')">Charts</button>
+            <button class="navButton" onclick="changeScreen('search')">Search</button>
+            <button class="navButton" onclick="changeScreen('resector')">Resector</button>
+            <button class="navButton" onclick="changeScreen('help')">Help</button>
+            <button class="navButton" onclick="changeScreen('lookup')">Lookup</button>
         </div>
     </div>
 </body>
