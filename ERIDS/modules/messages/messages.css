@@ -1,5 +1,13 @@
+#messages {
+    width: 100%;
+}
+
+
+
 .heading-label {
     background-color: #838883;
+    color: black;
+    text-align: center;
     width: 100%;
-    margin: 0;
+    margin-bottom: 13px;
 }

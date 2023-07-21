@@ -2,12 +2,14 @@ html {
     overflow: hidden;
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 
 body {
     background-color: #04021d;
     color: #f3e0c1;
     height: 100%;
+    width: 100%
 }
 
 /* Button Bar */
@@ -52,12 +54,16 @@ body {
 
 .erids {
     height: 75%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #eridsViewer {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .bottom-bar {
