@@ -46,6 +46,10 @@ body {
     background-color: #727572;
 }
 
+.navButton:disabled {
+
+}
+
 .hiddenButton {
     visibility: hidden;
 }
