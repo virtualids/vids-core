@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 50px;
+    width: 35px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,8 +8,16 @@
 
 ::-webkit-scrollbar-thumb {
     background: #252703;
+    border: 1px solid #797938;
 }
 
 ::-webkit-scrollbar-button {
     background: #252703;
+    height: 35px;
+    border: 1px solid #797938;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-position: center 1px;
+    background-image: url("triangle.png");
 }
