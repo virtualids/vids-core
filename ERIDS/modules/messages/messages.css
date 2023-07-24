@@ -1,9 +1,40 @@
+body {
+
+}
+
 #messages {
     width: 100%;
+}
+
+#messagesBay {
     overflow-y:scroll;
+    display: grid;
+
+    grid-template-columns:
+    [location] 100px;
+    [message] auto;
+
+    grid-auto-rows: auto;
 }
 
 
+
+.message-entry {
+    display: grid;
+    overflow-wrap: normal;
+}
+
+.location {
+    color: #03f6f8;
+    grid-column-start: location;
+    grid-column-end: location;
+}
+
+.message {
+    color: #efe392;
+    grid-column-start: message;
+    grid-column-end: message;
+}
 
 .heading-label {
     background-color: #838883;
@@ -11,4 +42,6 @@
     text-align: center;
     width: 100%;
     margin-bottom: 13px;
+    grid-column-start: location;
+    grid-column-end: message;
 }

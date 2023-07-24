@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 25px;
+    width: 50px;
 }
 
 ::-webkit-scrollbar-track {
@@ -7,5 +7,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
+    background: #252703;
+}
+
+::-webkit-scrollbar-button {
     background: #252703;
 }

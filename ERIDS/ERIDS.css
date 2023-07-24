@@ -3,6 +3,7 @@ html {
     margin: 0;
     height: 100%;
     width: 100%;
+    font-family: Arial, serif;
 }
 
 body {
@@ -10,6 +11,10 @@ body {
     color: #f3e0c1;
     height: 100%;
     width: 100%
+}
+
+h3 {
+    justify-self: center;
 }
 
 /* Button Bar */

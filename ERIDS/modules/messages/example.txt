@@ -1,0 +1,3 @@
+NOTAMs are split up into 2 parts
+
+Location and the message
