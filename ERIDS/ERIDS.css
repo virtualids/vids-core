@@ -20,6 +20,7 @@ h3 {
 
 iframe {
     margin: 0;
+    border: none;
 }
 
 /* Button Bar */
@@ -75,11 +76,12 @@ iframe {
     padding: 0;
 }
 
-#eridsViewer {
+.embedWindow {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    display: none;
 }
 
 .bottom-bar {
