@@ -9,6 +9,7 @@ There isn't a set list of systems. However, En Route Information Display System 
 ## When will this project be done?
 At this time, there is no timeline. The hope is that we can get one system ready for basic use and publish it. From there it will be fined and more systems can be created overtime.
 
+## Other Information
 *This document will be updated as necessary to reflect any changes in the project.*
 *vIDS is originally created by Brody Carty, Samuel Valencia, and Brody Durrett pre open source. A list of other contributors will be included and all credit will be given.*
 
