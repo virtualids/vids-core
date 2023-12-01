@@ -26,6 +26,9 @@
 			<li aria-current={$page.url.pathname.startsWith('https://discord.gg/YfpXqFRG3H') ? 'page' : undefined}>
 				<a href="https://discord.gg/YfpXqFRG3H">discord</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/admin' ? 'page' : undefined}>
+				<a href="/admin">admin</a>
+			</li>
 		</ul>
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
