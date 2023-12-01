@@ -17,6 +17,8 @@
 
 	</h1>
 
+	<br>
+
 	<h2>
 		data information mastered for vatusa
 	</h2>
@@ -37,12 +39,5 @@
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
 
 </style>
