@@ -6,9 +6,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+		
 	</div>
 
 	<nav>
@@ -22,8 +20,11 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+			<li aria-current={$page.url.pathname.startsWith('https://github.com/virtualids') ? 'page' : undefined}>
+				<a href="https://github.com/virtualids">GitHub</a>
+			</li>
+			<li aria-current={$page.url.pathname.startsWith('https://discord.gg/YfpXqFRG3H') ? 'page' : undefined}>
+				<a href="https://discord.gg/YfpXqFRG3H">Discord</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -32,9 +33,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
+		
 	</div>
 </header>
 
@@ -49,24 +48,24 @@
 		height: 3em;
 	}
 
-	.corner a {
+	/* .corner a { 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-	}
+	} */
 
-	.corner img {
+	/* .corner img { 
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-	}
+	} */
 
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		--background: rgba(29, 29, 29, 0.7);
 	}
 
 	svg {
@@ -98,7 +97,7 @@
 	}
 
 	li[aria-current='page']::before {
-		--size: 6px;
+		--size: 7px;
 		content: '';
 		width: 0;
 		height: 0;

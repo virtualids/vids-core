@@ -12,14 +12,14 @@
 <section>
 	<h1>
 		<span class="welcome">
-			<strong>Welcome to Virtual Information Display System</strong>
+			<strong>welcome to virtual information display system</strong>
 		</span>
 
 		
 	</h1>
 
 	<h2>
-		Data Information Mastered for VATUSA
+		data information mastered for vatusa
 	</h2>
 
 	
@@ -46,11 +46,4 @@
 		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
