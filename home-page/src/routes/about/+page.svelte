@@ -15,8 +15,10 @@
 		thank you to the following for the creation of vIDS! this could not be done without you!
 		<br>
 		<br>
-		Brody Carty - ZHU
+		brody carty
 		<br>
-		Samuel Valencia - ZJX
+		samuel valencia
+		<br>
+		michael knight
 	</p>
 </div>
