@@ -15,7 +15,6 @@
 			<strong>welcome to virtual information display system</strong>
 		</span>
 
-		
 	</h1>
 
 	<h2>

@@ -10,26 +10,26 @@
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
+		</svg> -->
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="/">home</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+				<a href="/about">about</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('https://github.com/virtualids') ? 'page' : undefined}>
-				<a href="https://github.com/virtualids">GitHub</a>
+				<a href="https://github.com/virtualids">github</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('https://discord.gg/YfpXqFRG3H') ? 'page' : undefined}>
-				<a href="https://discord.gg/YfpXqFRG3H">Discord</a>
+				<a href="https://discord.gg/YfpXqFRG3H">discord</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+		</svg> -->
 	</nav>
 
 	<div class="corner">
@@ -68,15 +68,15 @@
 		--background: rgba(29, 29, 29, 0.7);
 	}
 
-	svg {
+	/* svg {
 		width: 2em;
 		height: 3em;
 		display: block;
-	}
+	} */
 
-	path {
+	/* path {
 		fill: var(--background);
-	}
+	} */
 
 	ul {
 		position: relative;
@@ -87,13 +87,14 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
+		/* background: var(--background); */
 		background-size: contain;
 	}
 
 	li {
 		position: relative;
 		height: 100%;
+		padding: 10px;
 	}
 
 	li[aria-current='page']::before {
@@ -116,7 +117,7 @@
 		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;

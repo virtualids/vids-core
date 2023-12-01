@@ -12,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>created by <a href="/">various authors</a></p>
+		<p>created by <a href="/about">various authors</a></p>
 	</footer>
 </div>
 
