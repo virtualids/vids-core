@@ -10,6 +10,7 @@
   let selectedArtcc: string | null = 'Select ARTCC';
   let selectedFacility: string | null = 'Select Facility';
   let facilities: string[] = [];
+  let addingFacility = false;
 
   const artccs: { name: string; facilities: string[] }[] = [
     { name: 'ZHU - Houston ARTCC', facilities: ['ZHU - Houston Center', 'I90', 'IAH'] },
@@ -17,7 +18,7 @@
     // Add more ARTCCs and facilities as needed
   ];
 
-	function handleArtccChange(event: Event) {
+  function handleArtccChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     selectedArtcc = select.value;
     facilities = artccs.find((artcc) => artcc.name === selectedArtcc)?.facilities || [];
@@ -25,9 +26,20 @@
     selectedFacility = 'Select Facility';
   }
 
-	function handleFacilityChange(event: Event) {
+  function handleFacilityChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     selectedFacility = select.value;
+  }
+
+  function addFacility() {
+    addingFacility = true;
+  }
+
+  function handleAddFacility() {
+    // Add your logic to handle the addition of the facility
+    console.log('Add facility logic here');
+    // Reset the state
+    addingFacility = false;
   }
 
   onMount(() => {
@@ -37,16 +49,10 @@
   });
 </script>
 
-<h1>
-	<div class="welcome">
-		<strong>add/edit facilities</strong>
-	</div>
-</h1>
-
 <section class="container">
   <h1>
     <div class="welcome">
-      <strong>add/edit facilities</strong>
+      <strong>Add/Edit Facilities</strong>
     </div>
   </h1>
 
@@ -71,6 +77,25 @@
   {/if}
 </section>
 
+<section>
+  {#if addingFacility}
+    <div class="facility-container">
+      <label for="id">ID:</label>
+      <input class="color" type="text" id="id" />
+
+      <label for="name">Name:</label>
+      <input class="color" type="text" id="name" />
+
+      <label for="type">Type:</label>
+      <input class="color" type="text" id="type" />
+
+      <button on:click={handleAddFacility}>Add</button>
+    </div>
+  {:else}
+    <button on:click={addFacility}>Add Facility</button>
+  {/if}
+</section>
+
 <style>
   section {
     display: flex;
@@ -84,13 +109,14 @@
   h1 {
     width: 100%;
     font-size: 25px;
+    margin-bottom: 10px;
   }
 
   .container {
     text-align: center;
-		display: flex;
-		flex-direction: row;
-		border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .welcome {
@@ -99,10 +125,31 @@
 
   .dropdown-container {
     margin-bottom: 20px;
-		display: flex; 
+    display: flex;
     margin-right: 20px; /* Adjust margin as needed */
-		color: black; 
-		background-color: aqua;
+    color: black;
+    background-color: aqua;
+  }
+
+  .facility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .color {
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    margin-bottom: 10px;
   }
 </style>
-
