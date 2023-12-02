@@ -14,13 +14,12 @@
 		<span class="welcome">
 			<strong>welcome to virtual information display system</strong>
 		</span>
-
 	</h1>
 
 	<br>
 
 	<h2>
-		data information mastered for vatusa
+		data information mastered for <strong><a href="https://www.vatusa.net/">vatusa</a></strong>
 	</h2>
 
 	
