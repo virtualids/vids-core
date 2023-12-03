@@ -71,7 +71,7 @@
 <section class="container">
   <h1>
     <div class="welcome">
-      <strong>add/edit Facilities</strong>
+      <strong>add/edit facilities</strong>
     </div>
   </h1>
 
@@ -112,10 +112,10 @@
       <option value="tower">Tower</option>
     </select>
 
-    <button class="{addingFacility ? 'bordered' : ''}" on:click={handleAddFacility}>Add</button>
+    <button class="{addingFacility ? 'bordered' : ''}" on:click={handleAddFacility}>add</button>
   </div>
 {:else}
-  <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>Add Facility</button>
+  <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>add facility</button>
 {/if}
 </section>
 
