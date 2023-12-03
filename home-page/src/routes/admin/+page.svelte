@@ -150,8 +150,9 @@
   .dropdown-container {
     margin-bottom: 20px;
     display: flex;
-    margin-right: 20px; /* Adjust margin as needed */
+    margin-right: 0px; /* Adjust margin as needed */
     color: black;
+    background-color: rgba(0, 0, 0, 0)
   }
 
   .facility-container {
