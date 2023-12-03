@@ -24,7 +24,7 @@
     { id: 'hu', name: 'ZHU - Houston ARTCC', facilities: [] },
     { id: 'id', name: 'ZID - Indianapolis ARTCC', facilities: [] },
     { id: 'jx', name: 'ZJX - Jacksonville ARTCC', facilities: [] },
-    { id: 'kc', name: 'ZKC - Kansas City ARTCC', facilities: ["Kansas City Center (ZKC)", "Kansas City Approach (KC)"] },
+    { id: 'kc', name: 'ZKC - Kansas City ARTCC', facilities: [] },
     { id: 'la', name: 'ZLA - Los Angeles ARTCC', facilities: [] },
     { id: 'me', name: 'ZME - Memphis ARTCC', facilities: [] },
     { id: 'ma', name: 'ZMA - Miami ARTCC', facilities: [] },
