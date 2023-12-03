@@ -99,15 +99,15 @@
 <section>
   {#if addingFacility}
     <div class="facility-container">
-      <label for="id">{selectedFacility ? 'id' : 'enter facility id'}:</label>
+      <label for="id">{selectedFacility ? 'id' : 'enter facility id'}:enter facility id</label>
       <input class="color" type="text" id="id" />
 
       <label for="name">{selectedFacility ? 'name' : 'enter facility name'}:</label>
       <input class="color" type="text" id="name" />
 
       <label for="type">{facilityType !== 'Select Facility Type' ? 'type' : 'select facility type'}:</label>
-      <select bind:value={facilityType}>
-        <option class="color" value="Select Facility Type">Select Facility Type</option>
+      <select class = "color" bind:value={facilityType}>
+        <option class="color" value="Select Facility Type">select facility</option>
         <option class="color" value="enroute">enroute</option>
         <option class="color" value="tracon">tracon</option>
         <option class="color" value="tower">tower</option>
