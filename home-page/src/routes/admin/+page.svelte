@@ -5,15 +5,34 @@
 
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { ChevronDownSolid } from 'flowbite-svelte-icons';
 
   let selectedArtcc: string | null = 'Select ARTCC';
   let selectedFacility: string | null = 'Select Facility';
   let facilities: string[] = [];
 
-  const artccs: { name: string; facilities: string[] }[] = [
-    { name: 'ZHU - Houston ARTCC', facilities: ['ZHU - Houston Center', 'I90', 'IAH'] },
-    { name: 'ZJX - Jacksonville ARTCC', facilities: ['ZJX', 'F11', 'MCO'] },
+  const artccs: { id: string; name: string; facilities: string[] }[] = [
+    { id: 'ab', name: 'ZAB - Albuquerque ARTCC', facilities: [] },
+    { id: 'an', name: 'ZAN - Anchorage ARTCC', facilities: [] },
+    { id: 'tl', name: 'ZTL - Atlanta ARTCC', facilities: [] },
+    { id: 'bw', name: 'ZBW - Boston ARTCC', facilities: [] },
+    { id: 'au', name: 'ZAU - Chicago ARTCC', facilities: [] },
+    { id: 'ob', name: 'ZOB - Cleveland ARTCC', facilities: [] },
+    { id: 'dv', name: 'ZDV - Denver ARTCC', facilities: [] },
+    { id: 'fw', name: 'ZFW - Fort Worth ARTCC', facilities: [] },
+    { id: 'cf', name: 'HCF - Honolulu CF', facilities: [] },
+    { id: 'hu', name: 'ZHU - Houston ARTCC', facilities: [] },
+    { id: 'id', name: 'ZID - Indianapolis ARTCC', facilities: [] },
+    { id: 'jx', name: 'ZJX - Jacksonville ARTCC', facilities: [] },
+    { id: 'kc', name: 'ZKC - Kansas City ARTCC', facilities: ["Kansas City Center (ZKC)", "Kansas City Approach (KC)"] },
+    { id: 'la', name: 'ZLA - Los Angeles ARTCC', facilities: [] },
+    { id: 'me', name: 'ZME - Memphis ARTCC', facilities: [] },
+    { id: 'ma', name: 'ZMA - Miami ARTCC', facilities: [] },
+    { id: 'mp', name: 'ZMP - Minneapolis ARTCC', facilities: [] },
+    { id: 'ny', name: 'ZNY - New York ARTCC', facilities: [] },
+    { id: 'oa', name: 'ZOA - Oakland ARTCC', facilities: [] },
+    { id: 'lc', name: 'ZLC - Salt Lake City ARTCC', facilities: [] },
+    { id: 'se', name: 'ZSE - Seattle ARTCC', facilities: [] },
+    { id: 'dc', name: 'ZDC - Washington D.C. ARTCC', facilities: [] }
     // Add more ARTCCs and facilities as needed
   ];
 
