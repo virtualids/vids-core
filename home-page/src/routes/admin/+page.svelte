@@ -10,6 +10,7 @@
   let selectedFacility: string | null = 'Select Facility';
   let facilities: string[] = [];
   let addingFacility = false;
+  let facilityType: string = 'enroute';
 
   const artccs: { id: string; name: string; facilities: string[] }[] = [
     { id: 'ab', name: 'ZAB - Albuquerque ARTCC', facilities: [] },
@@ -41,7 +42,6 @@
     const select = event.target as HTMLSelectElement;
     selectedArtcc = select.value;
     facilities = artccs.find((artcc) => artcc.name === selectedArtcc)?.facilities || [];
-    // Reset the selected facility when ARTCC changes
     selectedFacility = 'Select Facility';
   }
 
@@ -63,15 +63,15 @@
 
   onMount(() => {
     // Set default values if needed
-    selectedArtcc = artccs[0].name;
+    selectedArtcc = 'Select ARTCC'; // Change the default value to 'Select ARTCC'
     facilities = artccs[0].facilities;
   });
-</script>
+</script> 
 
 <section class="container">
   <h1>
     <div class="welcome">
-      <strong>Add/Edit Facilities</strong>
+      <strong>add/edit Facilities</strong>
     </div>
   </h1>
 
@@ -98,21 +98,25 @@
 
 <section>
   {#if addingFacility}
-    <div class="facility-container">
-      <label for="id">ID:</label>
-      <input class="color" type="text" id="id" />
+  <div class="facility-container">
+    <label for="id">{selectedFacility ? 'ID' : 'Enter Facility ID'}:</label>
+    <input class="color" type="text" id="id" />
 
-      <label for="name">Name:</label>
-      <input class="color" type="text" id="name" />
+    <label for="name">{selectedFacility ? 'Name' : 'Enter Facility Name'}:</label>
+    <input class="color" type="text" id="name" />
 
-      <label for="type">Type:</label>
-      <input class="color" type="text" id="type" />
+    <label for="type">{facilityType !== 'enroute' ? 'Type' : 'Select Facility Type'}:</label>
+    <select bind:value={facilityType}>
+      <option value="enroute">Enroute</option>
+      <option value="tracon">Tracon</option>
+      <option value="tower">Tower</option>
+    </select>
 
-      <button on:click={handleAddFacility}>Add</button>
-    </div>
-  {:else}
-    <button on:click={addFacility}>Add Facility</button>
-  {/if}
+    <button class="{addingFacility ? 'bordered' : ''}" on:click={handleAddFacility}>Add</button>
+  </div>
+{:else}
+  <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>Add Facility</button>
+{/if}
 </section>
 
 <style>
@@ -123,6 +127,7 @@
     align-items: center;
     flex: 0.6;
     height: 100vh;
+    text-align: center;
   }
 
   h1 {
@@ -147,7 +152,6 @@
     display: flex;
     margin-right: 20px; /* Adjust margin as needed */
     color: black;
-    background-color: aqua;
   }
 
   .facility-container {
@@ -168,7 +172,20 @@
     margin-bottom: 5px;
   }
 
-  input {
+  input, select {
     margin-bottom: 10px;
   }
+
+  button {
+  margin-top: 10px;
+  border: 1px solid white; /* Adjust border as needed */
+  background-color: transparent; /* Set background to transparent */
+  color: white; /* Set text color */
+  cursor: pointer; /* Add pointer cursor on hover */
+  padding: 5px 10px; /* Add padding */
+}
+
+.bordered {
+  border: 2px solid black;
+}
 </style>
