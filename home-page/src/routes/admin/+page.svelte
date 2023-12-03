@@ -6,11 +6,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let selectedArtcc: string | null = 'Select ARTCC';
-  let selectedFacility: string | null = 'Select Facility';
+  let selectedArtcc: string | null = 'select artcc';
+  let selectedFacility: string | null = 'select facility';
   let facilities: string[] = [];
   let addingFacility = false;
-  let facilityType: string = 'enroute';
+  let facilityType: string = 'Select Facility Type'; // Set the initial value
 
   const artccs: { id: string; name: string; facilities: string[] }[] = [
     { id: 'ab', name: 'ZAB - Albuquerque ARTCC', facilities: [] },
@@ -40,14 +40,14 @@
 
   function handleArtccChange(event: Event) {
     const select = event.target as HTMLSelectElement;
-    selectedArtcc = select.value;
-    facilities = artccs.find((artcc) => artcc.name === selectedArtcc)?.facilities || [];
-    selectedFacility = 'Select Facility';
+    selectedArtcc = select.value.toLowerCase();
+    facilities = artccs.find((artcc) => artcc.name.toLowerCase() === selectedArtcc)?.facilities || [];
+    selectedFacility = 'select facility';
   }
 
   function handleFacilityChange(event: Event) {
     const select = event.target as HTMLSelectElement;
-    selectedFacility = select.value;
+    selectedFacility = select.value.toLowerCase();
   }
 
   function addFacility() {
@@ -63,10 +63,10 @@
 
   onMount(() => {
     // Set default values if needed
-    selectedArtcc = 'Select ARTCC'; // Change the default value to 'Select ARTCC'
-    facilities = artccs[0].facilities;
+    selectedArtcc = 'select artcc';
+    facilities = artccs[0].facilities.map(facility => facility.toLowerCase());
   });
-</script> 
+</script>
 
 <section class="container">
   <h1>
@@ -77,17 +77,17 @@
 
   <div class="dropdown-container">
     <select bind:value={selectedArtcc} on:change={handleArtccChange}>
-      <option disabled>Select ARTCC</option>
+      <option disabled>select artcc</option>
       {#each artccs as { name } (name)}
-        <option value={name}>{name}</option>
+        <option value={name.toLowerCase()}>{name}</option>
       {/each}
     </select>
   </div>
 
-  {#if selectedArtcc !== 'Select ARTCC'}
+  {#if selectedArtcc !== 'select artcc'}
     <div class="dropdown-container">
       <select bind:value={selectedFacility} on:change={handleFacilityChange}>
-        <option disabled>Select Facility</option>
+        <option disabled>select facility</option>
         {#each facilities as facility (facility)}
           <option value={facility}>{facility}</option>
         {/each}
@@ -98,25 +98,26 @@
 
 <section>
   {#if addingFacility}
-  <div class="facility-container">
-    <label for="id">{selectedFacility ? 'ID' : 'Enter Facility ID'}:</label>
-    <input class="color" type="text" id="id" />
+    <div class="facility-container">
+      <label for="id">{selectedFacility ? 'id' : 'enter facility id'}:</label>
+      <input class="color" type="text" id="id" />
 
-    <label for="name">{selectedFacility ? 'Name' : 'Enter Facility Name'}:</label>
-    <input class="color" type="text" id="name" />
+      <label for="name">{selectedFacility ? 'name' : 'enter facility name'}:</label>
+      <input class="color" type="text" id="name" />
 
-    <label for="type">{facilityType !== 'enroute' ? 'Type' : 'Select Facility Type'}:</label>
-    <select bind:value={facilityType}>
-      <option value="enroute">Enroute</option>
-      <option value="tracon">Tracon</option>
-      <option value="tower">Tower</option>
-    </select>
+      <label for="type">{facilityType !== 'Select Facility Type' ? 'type' : 'select facility type'}:</label>
+      <select bind:value={facilityType}>
+        <option class="color" value="Select Facility Type">Select Facility Type</option>
+        <option class="color" value="enroute">enroute</option>
+        <option class="color" value="tracon">tracon</option>
+        <option class="color" value="tower">tower</option>
+      </select>
 
-    <button class="{addingFacility ? 'bordered' : ''}" on:click={handleAddFacility}>add</button>
-  </div>
-{:else}
-  <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>add facility</button>
-{/if}
+      <button class="{addingFacility ? 'bordered' : ''}" on:click={handleAddFacility}>add</button>
+    </div>
+  {:else}
+    <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>add facility</button>
+  {/if}
 </section>
 
 <style>
@@ -177,15 +178,15 @@
   }
 
   button {
-  margin-top: 10px;
-  border: 1px solid white; /* Adjust border as needed */
-  background-color: transparent; /* Set background to transparent */
-  color: white; /* Set text color */
-  cursor: pointer; /* Add pointer cursor on hover */
-  padding: 5px 10px; /* Add padding */
-}
+    margin-top: 10px;
+    border: 1px solid white; /* Adjust border as needed */
+    background-color: transparent; /* Set background to transparent */
+    color: white; /* Set text color */
+    cursor: pointer; /* Add pointer cursor on hover */
+    padding: 5px 10px; /* Add padding */
+  }
 
-.bordered {
-  border: 2px solid black;
-}
+  .bordered {
+    border: 2px solid black;
+  }
 </style>
