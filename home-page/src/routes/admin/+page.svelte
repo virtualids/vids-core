@@ -118,6 +118,8 @@
   {:else}
     <button class="{addingFacility ? 'bordered' : ''}" on:click={addFacility}>add facility</button>
   {/if}
+
+  <button><a href = "/admin/pirep">Admin pirep view</a></button>
 </section>
 
 <style>

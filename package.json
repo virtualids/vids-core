@@ -19,5 +19,8 @@
   "homepage": "https://github.com/bordolbg/vids#readme",
   "devDependencies": {
     "electron": "^24.4.0"
+  },
+  "dependencies": {
+    "maplibre-gl": "^3.6.2"
   }
 }
