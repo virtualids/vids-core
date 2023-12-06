@@ -102,31 +102,77 @@
             }
         },
         "kc": {
-
+            "grouped_facilities": [
+                "me",
+                "mp",
+                "dv",
+                "id",
+                "fw",
+                "au",
+                "ab"
+            ]
         },
         "la": {
-
+            "grouped_facilities": [
+                "oa",
+                "ab",
+                "dv",
+                "lc"
+            ]
         },
         "me": {
-
+            "grouped_facilities": [
+                "tl",
+                "id",
+                "kc",
+                "hu",
+                "fw"
+            ]
         },
         "ma": {
-
+            "grouped_facilities": [
+                "hu",
+                "jx"
+            ]
         },
         "ny": {
-
+            "grouped_facilities": [
+                "dc",
+                "bw",
+                "ob"
+            ]
         },
         "oa": {
-
+            "grouped_facilities": [
+                "la",
+                "se",
+                "lc"
+            ]
         },
         "lc": {
-
+            "grouped_facilities": [
+                "oa",
+                "se",
+                "la",
+                "dv",
+                "mp"
+            ]
         },
         "se": {
-
+            "grouped_facilities": [
+                "la",
+                "oa"
+            ]
         },
         "dc": {
-
+            "grouped_facilities": [
+                "bw",
+                "id",
+                "ny",
+                "tl",
+                "jx",
+                "ob"
+            ]
         }
     }
 }
