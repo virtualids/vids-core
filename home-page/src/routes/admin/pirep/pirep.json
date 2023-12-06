@@ -1,0 +1,132 @@
+{
+    "id": {
+        "ab": {
+            "grouped_facilities": [
+                "la",
+                "hu",
+                "dv"
+            ]
+        },
+        "an": {
+            "grouped_facilities": [
+                "cf"
+            ]
+        },
+        "tl": {
+            "grouped_facilities": [
+                "jx",
+                "dc",
+                "id",
+                "me",
+                "hu"
+            ]
+        },
+        "bw": {
+            "grouped_facilities": [
+                "ob",
+                "nu"
+            ]
+        },
+        "au": {
+            "grouped_facilities": [
+                "ob",
+                "mp",
+                "id",
+                "kc"
+            ]
+        },
+        "ob": {
+            "grouped_facilities": [
+                "au",
+                "mp",
+                "id",
+                "ny",
+                "bw",
+                "dc"
+            ]
+        },
+        "dv": {
+            "grouped_facilities": [
+                "lc",
+                "mp",
+                "zb",
+                "la",
+                "kc"
+            ]
+        },
+        "fw": {
+            "grouped_facilities": [
+                "ab",
+                "hu",
+                "me",
+                "kc"
+            ]
+        },
+        "cf": {
+            "grouped_facilities": [
+                "an"
+            ]
+        },
+        "hu": {
+            "grouped_facilities": [
+                "jx",
+                "fw",
+                "tl",
+                "ab"
+            ]
+        },
+        "id": {
+            "grouped_facilities": [
+                "tl",
+                "ob",
+                "au",
+                "kc",
+                "dc"
+            ]
+        },
+        "jx": {
+            "grouped_facilities": [
+                "dc",
+                "hu",
+                "tl",
+                "ma"
+            ],
+            "report_callsign": {
+                "AAL1432": {
+                    "severity": "urgent",
+                    "altitude": 31000,
+                    "location": "12027CRG",
+                    "type": "severe",
+                    "time": "0116"
+                }
+            }
+        },
+        "kc": {
+
+        },
+        "la": {
+
+        },
+        "me": {
+
+        },
+        "ma": {
+
+        },
+        "ny": {
+
+        },
+        "oa": {
+
+        },
+        "lc": {
+
+        },
+        "se": {
+
+        },
+        "dc": {
+
+        }
+    }
+}

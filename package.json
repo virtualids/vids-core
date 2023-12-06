@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/bordolbg/vids#readme",
   "devDependencies": {
+    "@tsconfig/svelte": "^5.0.2",
     "electron": "^24.4.0"
   },
   "dependencies": {
-    "maplibre-gl": "^3.6.2"
+    "@sveltejs/adapter-auto": "^2.1.1",
+    "maplibre-gl": "^3.6.2",
+    "svelte": "^4.2.8"
   }
 }
