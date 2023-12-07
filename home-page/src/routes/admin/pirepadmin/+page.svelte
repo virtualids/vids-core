@@ -3,39 +3,38 @@
 </svelte:head>
 
 <script lang="ts">
-  import { onMount, afterUpdate } from 'svelte';
-  import { writable } from 'svelte/store';
+  import { onMount, afterUpdate } from "svelte";
+  import { writable } from "svelte/store";
 
-  let selectedArtcc: string | null = 'select artcc';
+  let selectedArtcc: string | null = "select artcc";
   let pirepData: Record<string, any> = {};
   const artccs: { id: string; name: string }[] = [
-    { id: 'ab', name: 'ZAB - Albuquerque ARTCC'},
-    { id: 'an', name: 'ZAN - Anchorage ARTCC'},
-    { id: 'tl', name: 'ZTL - Atlanta ARTCC'},
-    { id: 'bw', name: 'ZBW - Boston ARTCC'},
-    { id: 'au', name: 'ZAU - Chicago ARTCC'},
-    { id: 'ob', name: 'ZOB - Cleveland ARTCC'},
-    { id: 'dv', name: 'ZDV - Denver ARTCC'},
-    { id: 'fw', name: 'ZFW - Fort Worth ARTCC'},
-    { id: 'cf', name: 'HCF - Honolulu CF'},
-    { id: 'hu', name: 'ZHU - Houston ARTCC'},
-    { id: 'id', name: 'ZID - Indianapolis ARTCC'},
-    { id: 'jx', name: 'ZJX - Jacksonville ARTCC'},
-    { id: 'kc', name: 'ZKC - Kansas City ARTCC'},
-    { id: 'la', name: 'ZLA - Los Angeles ARTCC'},
-    { id: 'me', name: 'ZME - Memphis ARTCC'},
-    { id: 'ma', name: 'ZMA - Miami ARTCC'},
-    { id: 'mp', name: 'ZMP - Minneapolis ARTCC'},
-    { id: 'ny', name: 'ZNY - New York ARTCC'},
-    { id: 'oa', name: 'ZOA - Oakland ARTCC'},
-    { id: 'lc', name: 'ZLC - Salt Lake City ARTCC'},
-    { id: 'se', name: 'ZSE - Seattle ARTCC'},
-    { id: 'dc', name: 'ZDC - Washington D.C. ARTCC'}
+    { id: "ab", name: "ZAB - Albuquerque ARTCC" },
+    { id: "an", name: "ZAN - Anchorage ARTCC" },
+    { id: "tl", name: "ZTL - Atlanta ARTCC" },
+    { id: "bw", name: "ZBW - Boston ARTCC" },
+    { id: "au", name: "ZAU - Chicago ARTCC" },
+    { id: "ob", name: "ZOB - Cleveland ARTCC" },
+    { id: "dv", name: "ZDV - Denver ARTCC" },
+    { id: "fw", name: "ZFW - Fort Worth ARTCC" },
+    { id: "cf", name: "HCF - Honolulu CF" },
+    { id: "hu", name: "ZHU - Houston ARTCC" },
+    { id: "id", name: "ZID - Indianapolis ARTCC" },
+    { id: "jx", name: "ZJX - Jacksonville ARTCC" },
+    { id: "kc", name: "ZKC - Kansas City ARTCC" },
+    { id: "la", name: "ZLA - Los Angeles ARTCC" },
+    { id: "me", name: "ZME - Memphis ARTCC" },
+    { id: "ma", name: "ZMA - Miami ARTCC" },
+    { id: "mp", name: "ZMP - Minneapolis ARTCC" },
+    { id: "ny", name: "ZNY - New York ARTCC" },
+    { id: "oa", name: "ZOA - Oakland ARTCC" },
+    { id: "lc", name: "ZLC - Salt Lake City ARTCC" },
+    { id: "se", name: "ZSE - Seattle ARTCC" },
+    { id: "dc", name: "ZDC - Washington D.C. ARTCC" },
   ];
 
-
   // Store to hold the selected ARTCC data
-  const selectedData = writable([]);
+  const selectedData = writable<[string, any][]>([]);
 
   function handleArtccChange(event: Event) {
     const select = event.target as HTMLSelectElement;
@@ -45,7 +44,9 @@
     fetch(`pirep.json`)
       .then((response) => response.json())
       .then((data) => {
-        pirepData = data[selectedArtcc]?.report_callsign || {};
+        if (selectedArtcc) {
+          pirepData = data[selectedArtcc]?.report_callsign || {};
+        }
         const artccPireps = Object.entries(pirepData);
 
         // Check if there are any pireps for the selected ARTCC
@@ -56,7 +57,7 @@
         }
       })
       .catch((error) => {
-        console.error('Error fetching data | ', error);
+        console.error("Error fetching data | ", error);
         selectedData.set([]);
       });
   }
@@ -74,7 +75,7 @@
   });
 
   onMount(() => {
-    selectedArtcc = 'select artcc';
+    selectedArtcc = "select artcc";
   });
 </script>
 
@@ -89,8 +90,8 @@
     </select>
   </div>
 
-  {#if selectedArtcc !== 'select artcc'}
-    {#if selectedData.length > 0}
+  {#if selectedArtcc !== "select artcc"}
+    {#if $selectedData.length > 0}
       <div>
         <table class="table-style">
           <thead>
@@ -104,7 +105,7 @@
             </tr>
           </thead>
           <tbody>
-            {#each selectedData as [callsign, details]}
+            {#each $selectedData as [callsign, details]}
               <tr>
                 <td>{callsign}</td>
                 <td>{details.location}</td>
@@ -118,7 +119,7 @@
         </table>
       </div>
     {:else}
-      <p class = "no-pirep">No current PIREPs for this ARTCC.</p>
+      <p class="no-pirep">No current PIREPs for this ARTCC.</p>
     {/if}
   {/if}
 </section>
