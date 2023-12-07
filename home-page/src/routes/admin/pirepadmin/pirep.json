@@ -93,11 +93,12 @@
             ],
             "report_callsign": {
                 "AAL1432": {
-                    "severity": "urgent",
-                    "altitude": 31000,
-                    "location": "12027CRG",
-                    "type": "severe",
-                    "time": "0116"
+                    "location": "200015CRG",
+                    "time": "20:43Z",
+                    "altitude": 33000,
+                    "aircraft_type": "a320",
+                    "turbulence": "moderate",
+                    "remarks": "nothing"
                 }
             }
         },
