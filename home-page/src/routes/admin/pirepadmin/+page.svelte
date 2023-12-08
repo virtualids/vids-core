@@ -34,18 +34,20 @@
   ];
 
   // Store to hold the selected ARTCC data
-  const selectedData = writable<[string, any][]>([]);
+  const selectedData = writable<[string, any][] | null>(null);
 
   function handleArtccChange(event: Event) {
-    const select = event.target as HTMLSelectElement;
-    selectedArtcc = select.value.toLowerCase();
+    const select = event.currentTarget as HTMLSelectElement;
+    selectedArtcc = (select.value || "") as string;
 
     // Fetch data for the selected ARTCC from pirep.json
-    fetch('./pirep.json')
+    fetch(`pirep.json`)
       .then((response) => response.json())
-      .then((data) => {
+      .then((data: Record<string, any>) => {
         if (selectedArtcc) {
           pirepData = data[selectedArtcc]?.report_callsign || {};
+        } else {
+          pirepData = {};
         }
         const artccPireps = Object.entries(pirepData);
 
@@ -77,6 +79,7 @@
   onMount(() => {
     selectedArtcc = "select artcc";
   });
+
 </script>
 
 <section class="container">
@@ -90,38 +93,50 @@
     </select>
   </div>
 
-  {#if selectedArtcc !== "select artcc"}
-    {#if $selectedData.length > 0}
-      <div>
-        <table class="table-style">
-          <thead>
+{#if selectedArtcc !== 'select artcc'}
+  {#if selectedData && Array.isArray(selectedData)}
+    <div>
+      <table class="table-style">
+        <thead>
+          <tr>
+            <th>Callsign</th>
+            <th>Location</th>
+            <th>Altitude</th>
+            <th>Aircraft Type</th>
+            <th>Turbulence</th>
+            <th>Remarks</th>
+            <!-- New fields -->
+            <th>Type</th>
+            <th>Time</th>
+            <th>Flight Level</th>
+            <th>Sky</th>
+            <th>Weather</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each selectedData as [callsign, details]}
             <tr>
-              <th>Callsign</th>
-              <th>Location</th>
-              <th>Altitude</th>
-              <th>Aircraft Type</th>
-              <th>Turbulence</th>
-              <th>Remarks</th>
+              <td>{callsign}</td>
+              <td>{details?.location || 'not reported'}</td>
+              <td>{details?.altitude || 'not reported'}</td>
+              <td>{details?.aircraft_type || 'not reported'}</td>
+              <td>{details?.turbulence || 'not reported'}</td>
+              <td>{details?.remarks || 'not reported'}</td>
+              <!-- New fields -->
+              <td>{details?.type || 'not reported'}</td>
+              <td>{details?.time || 'not reported'}</td>
+              <td>{details?.flight_level || 'not reported'}</td>
+              <td>{details?.sky || 'not reported'}</td>
+              <td>{details?.weather || 'not reported'}</td>
             </tr>
-          </thead>
-          <tbody>
-            {#each $selectedData as [callsign, details]}
-              <tr>
-                <td>{callsign}</td>
-                <td>{details.location}</td>
-                <td>{details.altitude}</td>
-                <td>{details.aircraft_type}</td>
-                <td>{details.turbulence}</td>
-                <td>{details.remarks}</td>
-              </tr>
-            {/each}
-          </tbody>
-        </table>
-      </div>
-    {:else}
-      <p class="no-pirep">No current PIREPs for this ARTCC.</p>
-    {/if}
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  {:else}
+    <p class="no-pirep">No current PIREPs for this ARTCC.</p>
   {/if}
+{/if}
 </section>
 
 <style>
@@ -155,7 +170,8 @@
     margin-top: 20px;
   }
 
-  th, td {
+  th,
+  td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
