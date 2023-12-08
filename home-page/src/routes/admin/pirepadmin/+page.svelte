@@ -41,7 +41,7 @@
     selectedArtcc = select.value.toLowerCase();
 
     // Fetch data for the selected ARTCC from pirep.json
-    fetch(`pirep.json`)
+    fetch('./pirep.json')
       .then((response) => response.json())
       .then((data) => {
         if (selectedArtcc) {
