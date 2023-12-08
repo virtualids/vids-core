@@ -93,12 +93,32 @@
             ],
             "report_callsign": {
                 "AAL1432": {
-                    "location": "200015CRG",
-                    "time": "20:43Z",
-                    "altitude": 33000,
+                    "type": "UA",
+                    "location": "027360CRG",
+                    "time": "1432",
+                    "flight_level": "100",
+                    "aircraft_type": "b738",
+                    "sky": "OVC020 SCT070",
+                    "wx": "RA 10SM",
+                    "temp": "m12",
+                    "winds": "24036",
+                    "turbulence": "severse frequent",
+                    "icing": false,
+                    "remarks": false
+                },
+                "AAL1872": {
+                    "type": "UUA",
+                    "location": "21438CRG",
+                    "time": "1819",
+                    "flight_level": "280",
                     "aircraft_type": "a320",
-                    "turbulence": "moderate",
-                    "remarks": "nothing"
+                    "sky": "SCT280",
+                    "wx": "RA",
+                    "temp": false,
+                    "winds": false,
+                    "turbulence": "light",
+                    "icing": false,
+                    "remarks": "light turbulence"
                 }
             }
         },
