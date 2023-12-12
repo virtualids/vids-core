@@ -24,6 +24,9 @@
 			<li aria-current={$page.url.pathname.startsWith('https://discord.gg/YfpXqFRG3H') ? 'page' : undefined}>
 				<a href="https://discord.gg/YfpXqFRG3H">discord</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/pirep' ? 'page' : undefined}>
+				<a href="/pirep">pirep</a>
+			</li>
 			<li aria-current={$page.url.pathname === '/admin' ? 'page' : undefined}>
 				<a href="/admin">admin</a>
 			</li>
