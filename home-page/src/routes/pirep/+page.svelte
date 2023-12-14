@@ -73,6 +73,15 @@
       <label for="location">Location:</label>
       <input type="text" id="location" name="location">
 
+      <label for = "time">Time Phase:</label>
+      <input type ="text" id ="time" name = "time">
+
+      <label for = "altitude">Altitude:</label>
+      <input type = "text" id = "altitude" name = "altitude">
+
+      <label for = "turbulence">Turbulence:</label>
+      <input type = "turblence" id = "turbulence" name = "turbulence">
+
       <!-- Add other PIREP fields here -->
 
       <button>Add PIREP for this ARTCC</button>
