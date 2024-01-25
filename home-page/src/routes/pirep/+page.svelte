@@ -65,26 +65,25 @@
     <div class="pirep-form-container">
       <h2>Add a PIREP for {selectedArtcc}</h2>
       <label for="pirep-type">PIREP Type:</label>
-      <select id="pirep-type" name="pirep-type">
+      <select id="pirep-type" name="pirep-type" class="data">
         <option value="ua">UA</option>
         <option value="uua">UUA</option>
       </select>
 
       <label for="location">Location:</label>
-      <input type="text" id="location" name="location">
+      <input type="text" id="location" name="location" class="data">
 
       <label for = "time">Time Phase:</label>
-      <input type ="text" id ="time" name = "time">
+      <input type ="text" id ="time" name = "time" class="data">
 
       <label for = "altitude">Altitude:</label>
-      <input type = "text" id = "altitude" name = "altitude">
+      <input type = "text" id = "altitude" name = "altitude" class="data">
 
       <label for = "turbulence">Turbulence:</label>
-      <input type = "turblence" id = "turbulence" name = "turbulence">
+      <input type = "turblence" id = "turbulence" name = "turbulence" class="data">
 
       <!-- Add other PIREP fields here -->
 
-      <button>Add PIREP for this ARTCC</button>
     </div>
   {/if}
 
@@ -125,6 +124,10 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+  }
+
+  .data {
+    color: black;
   }
 
   label {
